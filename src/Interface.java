@@ -1,15 +1,13 @@
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.Toolkit;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import java.awt.*;
+import javax.swing.*;
 
 public class Interface extends JFrame {
+    private JPanel fileManager = new JPanel();
     private JPanel toolBar = new JPanel();
 
     public Interface() {
         buildInterface();
+        buildFileManager();
         buildToolBar();
 
         setVisible(true);
@@ -27,6 +25,12 @@ public class Interface extends JFrame {
                 dim.width / 2 - this.getSize().width / 2,
                 dim.height / 2 - this.getSize().height / 2
         );
+    }
+
+    private void buildFileManager() {
+        this.add(fileManager, BorderLayout.WEST);
+        fileManager.setBackground(Color.WHITE);
+        fileManager.add(new JLabel("FILE EXPLORER"));
     }
 
     private void buildToolBar() {
