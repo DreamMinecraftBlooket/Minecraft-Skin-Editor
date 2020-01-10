@@ -2,7 +2,7 @@ import java.awt.*;
 import javax.swing.*;
 
 public class Interface extends JFrame {
-    private JPanel fileManager = new JPanel();
+    private JPanel fileManager = new FileManager();
     private JPanel toolBar = new JPanel();
 
     public Interface() {
@@ -29,8 +29,6 @@ public class Interface extends JFrame {
 
     private void buildFileManager() {
         this.add(fileManager, BorderLayout.WEST);
-        fileManager.setBackground(Color.WHITE);
-        fileManager.add(new JLabel("FILE EXPLORER"));
     }
 
     private void buildToolBar() {
